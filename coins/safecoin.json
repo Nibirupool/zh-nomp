@@ -1,0 +1,6 @@
+{
+    "name": "safecoin",
+    "symbol": "SFC",
+    "algorithm": "equihash",
+    "txfee": 0.00005
+}

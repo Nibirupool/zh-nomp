@@ -1,7 +1,7 @@
-# BitcoinZ - ZHash Node Open Mining Portal
+# Safecoin - ZHash Node Open Mining Portal
 
 
-This is a ZHash mining pool based off of Z-NOMP
+This is a ZHash mining pool based off of Z-NOMP and ZH-Nomp.
 
 #### Production Usage Notice
 This is beta software. All of the following are things that can change and break an existing ZH-NOMP setup: functionality of any feature, structure of configuration files and structure of redis data. If you use this software in production then *DO NOT* pull new code straight into production usage because it can and often will break your setup and require you to tweak things like config files or redis data. *Only tagged releases are considered stable.*
@@ -36,7 +36,7 @@ you are using - a good place to start with redis is [data persistence](http://re
 Follow the build/install instructions for your coin daemon. Your coin.conf file should end up looking something like this:
 ```
 daemon=1
-rpcuser=BitcoinZRPCuser
+rpcuser=SafecoinRPCuser
 rpcpassword=securepassword
 ```
 For redundancy, its recommended to have at least two daemon instances running in case one drops out-of-sync or offline,
@@ -85,7 +85,7 @@ node [path to cli.js] [coin name in config] [block hash symbol]
 ```
 Example: inside `bitcoinz.conf` add the line
 ```
-blocknotify=node /home/user/z-nomp/scripts/cli.js blocknotify bitcoinz %s
+blocknotify=node /home/user/z-nomp/scripts/cli.js blocknotify safecoin %s
 ```
 
 Alternatively, you can use a more efficient block notify script written in pure C. Build and usage instructions
@@ -111,7 +111,7 @@ output from Z-NOMP.
 #### Upgrading ZH-NOMP
 When updating ZH-NOMP to the latest code its important to not only `git pull` the latest from this repo, but to also update
 the `node-stratum-pool` and `node-multi-hashing` modules, and any config files that may have been changed.
-* Inside your Z-NOMP directory (where the init.js script is) do `git pull` to get the latest Z-NOMP code.
+* Inside your ZH-NOMP directory (where the init.js script is) do `git pull` to get the latest ZH-NOMP code.
 * Remove the dependenices by deleting the `node_modules` directory with `rm -r node_modules`.
 * Run `npm update` to force updating/reinstalling of the dependencies.
 * Compare your `config.json` and `pool_configs/coin.json` configurations to the latest example ones in this repo or the ones in the setup instructions where each config field is explained. <b>You may need to modify or add any new changes.</b>

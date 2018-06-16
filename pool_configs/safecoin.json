@@ -1,0 +1,86 @@
+{
+    "enabled": true,
+    "coin": "safecoin.json",
+
+    "address": "Ru54bXvo7aEzXCdM4B4XBj7TTi3KY2vyge",
+    "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
+
+    "zAddress": "x4WU43NCSqRZDEJDiPeDco5qq9xWvsnnFKc2nBwPL7zrCq5uTVfr3ti3qgfPAZAF5N3YtjqS5KavPwVbeqLKFZGFMddB3Rr",
+    "_comment_zAddress": "a private address used to send coins to tAddress.",
+
+    "tAddress": "RtN4SEhnWSHvdeNhCW9Hshqmi3iz3uWQiR",
+    "_comment_tAddress": "transparent address used to send payments, make this a different address, otherwise payments will not send",
+
+    "walletInterval": 2.5,
+
+    "rewardRecipients": {
+    },
+
+    "tlsOptions": {
+        "enabled": false,
+        "serverKey":"",
+        "serverCert":"",
+        "ca":""
+    },
+
+    "paymentProcessing": {
+	"minConf": 10,
+        "enabled": false,
+        "paymentMode": "prop",
+        "_comment_paymentMode":"prop, pplnt",
+        "paymentInterval": 20,
+        "minimumPayment": 0.1,
+        "maxBlocksPerPayment": 3,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 8232,
+            "user": "testuser",
+            "password": "testpass"
+        }
+    },
+
+    "ports": {
+        "3059": {
+            "tls":false,
+            "diff": 12,
+            "varDiff": {
+                "minDiff": 0.1,
+                "maxDiff": 64,
+                "targetTime": 45,
+                "retargetTime": 80,
+                "variancePercent": 30
+            }
+        }
+
+    },
+
+
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 8771,
+            "user": "RPCusername",
+            "password": "RPCpasword"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 19333,
+        "disableTransactions": true
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "zcl",
+        "checkPassword": true,
+        "autoCreateWorker": false
+    }
+
+}
