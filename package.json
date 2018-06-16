@@ -51,7 +51,7 @@
         "nonce": "1.0.4",
         "redis": "2.7.1",
         "request": "2.81.0",
-        "stratum-pool": "git+https://github.com/NickRHill/node-stratum-pool.git"
+        "stratum-pool": "git+https://github.com/Fair-Exchange/node-stratum-pool.git"
     },
     "engines": {
         "node": ">=0.10"
